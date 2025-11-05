@@ -11,14 +11,25 @@ def extract_data(raw_data):
     Do not modify ``raw_data``.
     Returns: (s_names, s_grades). 
     """
-    s_names = []
-    s_grades = []
 
-    # ADD YOUR CODE HERE
+s_names = []
+s_grades = []
 
+for rec in raw_data:
+    term, name_raw, grade_raw = rec.split
+    s_names.append(name_raw.title)
+    s_grades.append(int(grade_raw))
     return s_names, s_grades
 
 def curve_grades(grades, by_amount):
+    while i < len(grades):
+        curved = grades[i] + by_amount
+    if curved >100:
+        curved=100  
+        grades[i]=curved
+    i+=1
+    return grades
+
     """
     Add ``by_amount`` to every grade, clamping any value above 100 down to 100.
 
@@ -29,6 +40,8 @@ def curve_grades(grades, by_amount):
 
 
 def print_top_performers(names, grades):
+    
+
     """
     Print one 'Name: Score' line for each record whose grade is >= 95.
 
@@ -38,8 +51,9 @@ def print_top_performers(names, grades):
     Output one line per qualifying record, no extra spaces or blank lines.
     Returns: None
     """
-    # ADD YOUR CODE HERE
-
+for i in range():len(s_names)
+if grades[i] >=95:
+    print(f"(names{i})") ,(f"(grades{i})")
 
 def main():
 
